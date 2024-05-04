@@ -1,4 +1,4 @@
-"""Defines URL patterns for learning_logs."""
+"""Defines URL pattrnes for learning_logs."""
 
 from django.urls import path
 
@@ -8,14 +8,14 @@ app_name = 'learning_logs'
 urlpatterns = [
     # Головна сторінка.
     path('', views.index, name='index'),
-    # Сторінка, що відображає всі теми.
+    # Сторінка що, відображає усі теми.
     path('topics/', views.topics, name='topics'),
-    # Сторінка, присвячена окремій темі.
+    # торінка присвячена окремій темі.
     path('topics/<int:topic_id>/', views.topic, name='topic'),
-    # Сторінка дял додавання нової теми.
+    # Сторінка для додавання нової теми.
     path('new_topic/', views.new_topic, name='new_topic'),
     # Сторінка для додавання нового допису.
     path('new_entry/<int:topic_id>/', views.new_entry, name='new_entry'),
-    # Сторінка для редагування допису.
+    # Сторінка для редагування дописів.
     path('edit_entry/<int:entry_id>/', views.edit_entry, name='edit_entry'),
 ]
